@@ -20,7 +20,7 @@
       <div class="home-helper">{{ 'onboarding.as_seen_on_section.text_html' | t: theme_settings_link: themeSettingsLink }}</div>
     {% endif %}
 
-    {% for logo in logos %}x
+    {% for logo in logos %}
 
       {% capture enabled %}home-show-{{logo}}{% endcapture %}
       {% capture url %}home-{{logo}}-url{% endcapture %}

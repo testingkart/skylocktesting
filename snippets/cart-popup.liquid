@@ -2,7 +2,7 @@
      <div id="order-popup-scrim"></div>
      <div class="center">
           <div class="popup-header">Get Your First</div>
-          <span class="order-poup-close">x</span>
+          <span class="order-poup-close">x</span>	
           <div class="popup-container">
                <div class="popup-row">
                     <div class="popup-12 price">
@@ -46,7 +46,7 @@
                          </label>
                     </span>
                  	<button id="checkout" class="checkout-button pull-right" disabled>CHECKOUT</button>
-               </div>
+               </div>       
           </div>
      </div>
 </div>
@@ -63,15 +63,15 @@
       	var qty = parseInt(jQuery(this).parent('.color-image').children('.quantity').text());
       	if (qty > 0) {
         	qty = qty - 1;
-      	  	jQuery(this).parent('.color-image').children('.quantity').text(qty);
+      	  	jQuery(this).parent('.color-image').children('.quantity').text(qty); 
           	product_count -= 1;
       	}
       	checkoutStatus();
-    });
+    });	
   	jQuery("#tos-checkbox").on("change", function(e) {
       	checkoutStatus();
     });
-
+  	
   	Shopify.queue = [];
     jQuery("button#checkout").on("click", function() {
         var updates = {}, count = 0;
@@ -97,7 +97,7 @@
             }
         });
     });
-
+  
   	Shopify.getCart(function(data) {
         for (var i in data.items) {
             var item = data.items[i];
@@ -105,12 +105,12 @@
         }
         checkoutStatus();
     });
-
+  
   	jQuery("#order-popup-scrim,.order-poup-close").on("click", function() {
         jQuery("#order-popup").fadeOut(400);
         //jQuery("#order-popup .box").css("transform", "rotateY(180deg)");
     });
-
+  
   	jQuery(".clicked-preorder").on("click", function(e) {
       	e.preventDefault();
         jQuery("#order-popup").fadeIn(200);

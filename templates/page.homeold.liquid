@@ -21,7 +21,7 @@
   {% if page_description %}
     <meta name="description" content="{{ page_description | escape }}" />
   {% endif %}
-
+  
   <link rel="shortcut icon" href="{{ 'favicon.ico' | asset_url }}" type="image/x-icon"/>
 
   <link rel="canonical" href="{{ canonical_url }}" />
@@ -32,7 +32,7 @@
   {% include 'social-meta' %}
   <!-- ProxiNova Font CSS -->
   {{ 'proxima_novablack.css' | asset_url | stylesheet_tag }}
-  {{ 'proximanova-bold.css' | asset_url | stylesheet_tag }}
+  {{ 'proximanova-bold.css' | asset_url | stylesheet_tag }}   
   {{ 'proximanovacond-light.css' | asset_url | stylesheet_tag }}
   {{ 'proximanovacond-regular.css' | asset_url | stylesheet_tag }}
   {{ 'proximanovacond-semibold.css' | asset_url | stylesheet_tag }}
@@ -40,11 +40,11 @@
   {{ 'proximanova-light.css' | asset_url | stylesheet_tag }}
   {{ 'proximanova-regular.css' | asset_url | stylesheet_tag }}
   {{ 'proximanova-semibold.css' | asset_url | stylesheet_tag }}
-
+  
   <!-- Theme CSS -->
   {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
 
-
+  {{ 'custom-master.css' | asset_url | stylesheet_tag }}
 
   <!-- Third Party JS Libraries -->
   {{ 'modernizr-2.7.1.min.js' | asset_url | script_tag }}
@@ -110,7 +110,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {% capture themeSettingsLink %}
       <a href="{{ shop.url }}/admin/themes">{{ 'onboarding.theme_settings_link' | t | downcase }}</a>
     {% endcapture %}
+    
 
+
+
+    <div class="home-top-section">
+      <div class="column-2 contentpart">
+        <div class="home-top-section-wrapper">
+          <div class="img-small-show"><img src="{{ 'skylock_box_facing.jpg' | asset_url }}" /></div>
+          <h2>A Gift Worth Waiting For!</h2>
+          <p class="first-par">Meet Skylock, the world’s first solar-powered smart bike lock that connects to your smartphone to provide keyless entry, theft detection, crash alerts and more.</p>
+          <p class="second-par">Pre-order Skylock today and save $70, <del>plus free ground shipping to the U.S. and Canada*</del></p>
+          <span class="price-par"><strike>$249</strike> $179 <span class="na-shipping">+ Free Shipping to North America*</span></span>
+          <a class="button preorder clicked-preorder slider-prebutton" href="/products/skylock">PRE-ORDER NOW</a>
+          <a class="button videobutton" id="play-button"><span class="videobutton-icon"></span><span>Watch Video</span></a>
+          <p class="text-note">*Add $15 for international ground shipping. Additional sales tax may apply. Offer ends 12/27/2015.</p>
+        </div>
+      </div>
+      <div class="column-2 imgpart">
+        <img src="{{ 'skylock_box_facing.jpg' | asset_url }}" />
+      </div>
+      <div class="clear"></div>
+    </div>
+
+{% comment %}
     <div class="home-slideshow-wrapper {{ settings.slideshow-layout }} {{ settings.slideshow-transition }}">
       <div class="home-slideshow-loader"></div>
 
@@ -173,7 +196,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <input class="mailing-list-email" name="contact[email]" type="email" placeholder="Enter Email to Subscribe to Product Updates" value="">
                             <input type="hidden" id="contact_tags" name="contact[tags]" value="prospect,newsletter"/>
                       		<button id="singup" type="submit" class="singup-button pull-right">{{ 'general.subscribe' | t }}</button>
-                      </div>
+                      </div> 
                     {% endform %}
                 </div>
               </div>
@@ -220,7 +243,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       </div>
                       <div class="popup-row last-row">
                           <button id="singup" type="submit" class="singup-button pull-right">{{ 'general.subscribe' | t }}</button>
-                      </div>
+                      </div> 
                     {% endform %}
                 </div>
               </div>
@@ -267,7 +290,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       </div>
                       <div class="popup-row last-row">
                           <button id="singup" type="submit" class="singup-button pull-right">{{ 'general.subscribe' | t }}</button>
-                      </div>
+                      </div> 
                     {% endform %}
                 </div>
               </div>
@@ -314,7 +337,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       </div>
                       <div class="popup-row last-row">
                           <button id="singup" type="submit" class="singup-button pull-right">{{ 'general.subscribe' | t }}</button>
-                      </div>
+                      </div> 
                     {% endform %}
                 </div>
               </div>
@@ -361,7 +384,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       </div>
                       <div class="popup-row last-row">
                           <button id="singup" type="submit" class="singup-button pull-right">{{ 'general.subscribe' | t }}</button>
-                      </div>
+                      </div> 
                     {% endform %}
                 </div>
               </div>
@@ -372,6 +395,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {% endif %}
       </div>
     </div>
+    {% endcomment %}
+    
 
     {% if settings.home-show-hero %}
       {% include 'home-hero' %}
@@ -500,7 +525,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       	  jQuery(".watch-video").on("click", function() {
               show_video();
           });
-      	  var triggered = false;
+      	  var triggered = false;	
       	  window.onbeforeunload = confirmExit;
           function confirmExit() {
             if(triggered){
@@ -511,7 +536,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }
      </script>
   	{% include 'cart-popup' %}
-
+  
   <!--Google Code for Remarketing Tag-->
   <!--
   Remarketing tags may not be associated with personally identifiable information or placed
@@ -549,7 +574,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   src="https://www.facebook.com/tr?id=556386737811562&ev=PageView&noscript=1"
   /></noscript>
   <!--End Facebook Pixel Code-->
-
-
+  
+  
 </body>
 </html>

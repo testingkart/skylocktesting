@@ -20,25 +20,25 @@ jQuery.cookie=function(b,j,m){if(typeof j!="undefined"){m=m||{};if(j===null){j="
  */
 
 if (typeof Currency === 'undefined') {
-    var Currency = {};
+  var Currency = {};
 }
 
 Currency.cookie = {
-    configuration: {
-        expires: 365,
-        path: '/',
-        domain: window.location.hostname
-    },
-    name: 'currency',
-    write: function(currency) {
-        jQuery.cookie(this.name, currency, this.configuration);
-    },
-    read: function() {
-        return jQuery.cookie(this.name);
-    },
-    destroy: function() {
-        jQuery.cookie(this.name, null, this.configuration);
-    }
+  configuration: {
+    expires: 365,
+    path: '/',
+    domain: window.location.hostname
+  },
+  name: 'currency',
+  write: function(currency) {
+    jQuery.cookie(this.name, currency, this.configuration);
+  },
+  read: function() {
+    return jQuery.cookie(this.name);
+  },
+  destroy: function() {
+    jQuery.cookie(this.name, null, this.configuration);
+  }
 };
 
 Currency.money_with_currency_format = {
@@ -133,159 +133,159 @@ Currency.money_with_currency_format = {
 };
 
 Currency.money_format = {
-    "USD": "${{amount}}",
-    "EUR": "&euro;{{amount}}",
-    "GBP": "&pound;{{amount}}",
-    "CAD": "${{amount}}",
-    "ARS": "${{amount_with_comma_separator}}",
-    "AUD": "${{amount}}",
-    "BBD": "${{amount}}",
-    "BDT": "Tk {{amount}}",
-    "BSD": "BS${{amount}}",
-    "BHD": "{{amount}}0 BHD",
-    "BRL": "R$ {{amount_with_comma_separator}}",
-    "BOB": "Bs{{amount_with_comma_separator}}",
-    "BND": "${{amount}}",
-    "BGN": "{{amount}} Ð»Ð²",
-    "MMK": "K{{amount}}",
-    "KYD": "${{amount}}",
-    "CLP": "${{amount_no_decimals}}",
-    "CNY": "&#165;{{amount}}",
-    "COP": "${{amount_with_comma_separator}}",
-    "CRC": "&#8353; {{amount_with_comma_separator}}",
-    "HRK": "{{amount_with_comma_separator}} kn",
-    "CZK": "{{amount_with_comma_separator}} K&#269;",
-    "DKK": "{{amount_with_comma_separator}}",
-    "DOP": "RD$ {{amount_with_comma_separator}}",
-    "XCD": "${{amount}}",
-    "EGP": "LE {{amount}}",
-    "XPF": "{{amount_no_decimals_with_comma_separator}} XPF",
-    "FJD": "${{amount}}",
-    "GHS": "GH&#8373;{{amount}}",
-    "GTQ": "{{amount}}",
-    "GYD": "${{amount}}",
-    "GEL": "{{amount}} GEL",
-    "HKD": "${{amount}}",
-    "HUF": "{{amount_no_decimals_with_comma_separator}}",
-    "ISK": "{{amount_no_decimals}} kr",
-    "INR": "{{amount}}",
-    "IDR": "{{amount_with_comma_separator}}",
-    "NIS": "{{amount}} NIS",
-    "JMD": "${{amount}}",
-    "JPY": "&#165;{{amount_no_decimals}}",
-    "JOD": "{{amount}}0 JD",
-    "KZT": "{{amount}} KZT",
-    "KES": "KSh{{amount}}",
-    "KWD": "{{amount}}0 KD",
-    "LVL": "Ls {{amount}}",
-    "LTL": "{{amount}} Lt",
-    "MXN": "$ {{amount}}",
-    "MYR": "RM{{amount}} MYR",
-    "MUR": "Rs {{amount}}",
-    "MDL": "{{amount}} MDL",
-    "MAD": "{{amount}} dh",
-    "MNT": "{{amount_no_decimals}} &#8366",
-    "MZN": "{{amount}} Mt",
-    "ANG": "&fnof;{{amount}}",
-    "NZD": "${{amount}}",
-    "NGN": "&#8358;{{amount}}",
-    "NOK": "kr {{amount_with_comma_separator}}",
-    "OMR": "{{amount_with_comma_separator}} OMR",
-    "PKR": "Rs.{{amount}}",
-    "PYG": "Gs. {{amount_no_decimals_with_comma_separator}}",
-    "PEN": "S/. {{amount}}",
-    "PHP": "&#8369;{{amount}}",
-    "PLN": "{{amount_with_comma_separator}} zl",
-    "QAR": "QAR {{amount_with_comma_separator}}",
-    "RON": "{{amount_with_comma_separator}} lei",
-    "RUB": "&#1088;&#1091;&#1073;{{amount_with_comma_separator}}",
-    "SAR": "{{amount}} SR",
-    "RSD": "{{amount}} RSD",
-    "SCR": "Rs {{amount}}",
-    "SGD": "${{amount}}",
-    "SYP": "S&pound;{{amount}}",
-    "ZAR": "R {{amount}}",
-    "KRW": "&#8361;{{amount_no_decimals}}",
-    "LKR": "Rs {{amount}}",
-    "SEK": "{{amount_no_decimals}} kr",
-    "CHF": "SFr. {{amount}}",
-    "TWD": "${{amount}}",
-    "THB": "{{amount}} &#xe3f;",
-    "TZS": "{{amount}} TZS",
-    "TTD": "${{amount}}",
-    "TRY": "{{amount}}TL",
-    "UAH": "â‚´{{amount}}",
-    "AED": "Dhs. {{amount}}",
-    "UYU": "${{amount_with_comma_separator}}",
-    "VEB": "Bs. {{amount_with_comma_separator}}",
-    "VND": "{{amount_no_decimals_with_comma_separator}}â‚«",
-    "ZMK": "K{{amount_no_decimals_with_comma_separator}}",
-    "XBT": "{{amount_no_decimals}} BTC"
+  "USD": "${{amount}}",
+  "EUR": "&euro;{{amount}}",
+  "GBP": "&pound;{{amount}}",
+  "CAD": "${{amount}}",
+  "ARS": "${{amount_with_comma_separator}}",
+  "AUD": "${{amount}}",
+  "BBD": "${{amount}}",
+  "BDT": "Tk {{amount}}",
+  "BSD": "BS${{amount}}",
+  "BHD": "{{amount}}0 BHD",
+  "BRL": "R$ {{amount_with_comma_separator}}",
+  "BOB": "Bs{{amount_with_comma_separator}}",
+  "BND": "${{amount}}",
+  "BGN": "{{amount}} Ð»Ð²",
+  "MMK": "K{{amount}}",
+  "KYD": "${{amount}}",
+  "CLP": "${{amount_no_decimals}}",
+  "CNY": "&#165;{{amount}}",
+  "COP": "${{amount_with_comma_separator}}",
+  "CRC": "&#8353; {{amount_with_comma_separator}}",
+  "HRK": "{{amount_with_comma_separator}} kn",
+  "CZK": "{{amount_with_comma_separator}} K&#269;",
+  "DKK": "{{amount_with_comma_separator}}",
+  "DOP": "RD$ {{amount_with_comma_separator}}",
+  "XCD": "${{amount}}",
+  "EGP": "LE {{amount}}",
+  "XPF": "{{amount_no_decimals_with_comma_separator}} XPF",
+  "FJD": "${{amount}}",
+  "GHS": "GH&#8373;{{amount}}",
+  "GTQ": "{{amount}}",
+  "GYD": "${{amount}}",
+  "GEL": "{{amount}} GEL",
+  "HKD": "${{amount}}",
+  "HUF": "{{amount_no_decimals_with_comma_separator}}",
+  "ISK": "{{amount_no_decimals}} kr",
+  "INR": "{{amount}}",
+  "IDR": "{{amount_with_comma_separator}}",
+  "NIS": "{{amount}} NIS",
+  "JMD": "${{amount}}",
+  "JPY": "&#165;{{amount_no_decimals}}",
+  "JOD": "{{amount}}0 JD",
+  "KZT": "{{amount}} KZT",
+  "KES": "KSh{{amount}}",
+  "KWD": "{{amount}}0 KD",
+  "LVL": "Ls {{amount}}",
+  "LTL": "{{amount}} Lt",
+  "MXN": "$ {{amount}}",
+  "MYR": "RM{{amount}} MYR",
+  "MUR": "Rs {{amount}}",
+  "MDL": "{{amount}} MDL",
+  "MAD": "{{amount}} dh",
+  "MNT": "{{amount_no_decimals}} &#8366",
+  "MZN": "{{amount}} Mt",
+  "ANG": "&fnof;{{amount}}",
+  "NZD": "${{amount}}",
+  "NGN": "&#8358;{{amount}}",
+  "NOK": "kr {{amount_with_comma_separator}}",
+  "OMR": "{{amount_with_comma_separator}} OMR",
+  "PKR": "Rs.{{amount}}",
+  "PYG": "Gs. {{amount_no_decimals_with_comma_separator}}",
+  "PEN": "S/. {{amount}}",
+  "PHP": "&#8369;{{amount}}",
+  "PLN": "{{amount_with_comma_separator}} zl",
+  "QAR": "QAR {{amount_with_comma_separator}}",
+  "RON": "{{amount_with_comma_separator}} lei",
+  "RUB": "&#1088;&#1091;&#1073;{{amount_with_comma_separator}}",
+  "SAR": "{{amount}} SR",
+  "RSD": "{{amount}} RSD",
+  "SCR": "Rs {{amount}}",
+  "SGD": "${{amount}}",
+  "SYP": "S&pound;{{amount}}",
+  "ZAR": "R {{amount}}",
+  "KRW": "&#8361;{{amount_no_decimals}}",
+  "LKR": "Rs {{amount}}",
+  "SEK": "{{amount_no_decimals}} kr",
+  "CHF": "SFr. {{amount}}",
+  "TWD": "${{amount}}",
+  "THB": "{{amount}} &#xe3f;",
+  "TZS": "{{amount}} TZS",
+  "TTD": "${{amount}}",
+  "TRY": "{{amount}}TL",
+  "UAH": "â‚´{{amount}}",
+  "AED": "Dhs. {{amount}}",
+  "UYU": "${{amount_with_comma_separator}}",
+  "VEB": "Bs. {{amount_with_comma_separator}}",
+  "VND": "{{amount_no_decimals_with_comma_separator}}â‚«",
+  "ZMK": "K{{amount_no_decimals_with_comma_separator}}",
+  "XBT": "{{amount_no_decimals}} BTC"
 };
 
 Currency.formatMoney = function(cents, format) {
-    if (typeof cents == 'string') cents = cents.replace('.','');
-    var value = '';
-    var patt = /\{\{\s*(\w+)\s*\}\}/;
-    var formatString = (format || this.money_format);
-    function addCommas(moneyString) {
-        return moneyString.replace(/(\d+)(\d{3}[\.,]?)/,'$1,$2');
-    }
-    switch(formatString.match(patt)[1]) {
-        case 'amount':
-            value = addCommas(floatToString(cents/100.0, 2));
-            break;
-        case 'amount_no_decimals':
-            value = addCommas(floatToString(cents/100.0, 0));
-            break;
-        case 'amount_with_comma_separator':
-            value = floatToString(cents/100.0, 2).replace(/\./, ',');
-            break;
-        case 'amount_no_decimals_with_comma_separator':
-            value = addCommas(floatToString(cents/100.0, 0)).replace(/\./, ',');
-            break;
-    }
-    return formatString.replace(patt, value);
+  if (typeof cents == 'string') cents = cents.replace('.','');
+  var value = '';
+  var patt = /\{\{\s*(\w+)\s*\}\}/;
+  var formatString = (format || this.money_format);
+  function addCommas(moneyString) {
+    return moneyString.replace(/(\d+)(\d{3}[\.,]?)/,'$1,$2');
+  }
+  switch(formatString.match(patt)[1]) {
+  case 'amount':
+    value = addCommas(floatToString(cents/100.0, 2));
+    break;
+  case 'amount_no_decimals':
+    value = addCommas(floatToString(cents/100.0, 0));
+    break;
+  case 'amount_with_comma_separator':
+    value = floatToString(cents/100.0, 2).replace(/\./, ',');
+    break;
+  case 'amount_no_decimals_with_comma_separator':
+    value = addCommas(floatToString(cents/100.0, 0)).replace(/\./, ',');
+    break;
+  }
+  return formatString.replace(patt, value);
 };
 
 function floatToString(numeric, decimals) {
-    var amount = numeric.toFixed(decimals).toString();
-    if(amount.match(/^\.\d+/)) { return "0"+amount; }
-    else { return amount; }
+  var amount = numeric.toFixed(decimals).toString();
+  if(amount.match(/^\.\d+/)) { return "0"+amount; }
+  else { return amount; }
 };
 
 Currency.currentCurrency = '';
 Currency.format = 'money_with_currency_format';
 
 Currency.convertAll = function(oldCurrency, newCurrency, selector, format) {
-    jQuery(selector || 'span.money').each(function() {
-        // If the amount has already been converted, we leave it alone.
-        if (jQuery(this).attr('data-currency') === newCurrency) return;
-        // If we are converting to a currency that we have saved, we will use the saved amount.
-        if (jQuery(this).attr('data-currency-'+newCurrency)) {
-            jQuery(this).html(jQuery(this).attr('data-currency-'+newCurrency));
-        }
-        else {
-            // Converting to Y for the first time? Let's get to it!
-            var cents = 0.0;
-            var oldFormat = Currency[format || Currency.format][oldCurrency] || '{{amount}}';
-            var newFormat = Currency[format || Currency.format][newCurrency] || '{{amount}}';
-            if (oldFormat.indexOf('amount_no_decimals') !== -1) {
-                cents = Currency.convert(parseInt(jQuery(this).html().replace(/[^0-9]/g, ''), 10)*100, oldCurrency, newCurrency);
-            }
-            else if (oldCurrency === 'JOD' || oldCurrency == 'KWD' || oldCurrency == 'BHD') {
-                cents = Currency.convert(parseInt(jQuery(this).html().replace(/[^0-9]/g, ''), 10)/10, oldCurrency, newCurrency);
-            }
-            else {
-                cents = Currency.convert(parseInt(jQuery(this).html().replace(/[^0-9]/g, ''), 10), oldCurrency, newCurrency);
-            }
-            var newFormattedAmount = Currency.formatMoney(cents, newFormat);
-            jQuery(this).html(newFormattedAmount);
-            jQuery(this).attr('data-currency-'+newCurrency, newFormattedAmount);
-        }
-        // We record the new currency locally.
-        jQuery(this).attr('data-currency', newCurrency);
-    });
-    this.currentCurrency = newCurrency;
-    this.cookie.write(newCurrency);
+  jQuery(selector || 'span.money').each(function() {
+    // If the amount has already been converted, we leave it alone.
+    if (jQuery(this).attr('data-currency') === newCurrency) return;
+    // If we are converting to a currency that we have saved, we will use the saved amount.
+    if (jQuery(this).attr('data-currency-'+newCurrency)) {
+      jQuery(this).html(jQuery(this).attr('data-currency-'+newCurrency));
+    }
+    else {
+      // Converting to Y for the first time? Let's get to it!
+      var cents = 0.0;
+      var oldFormat = Currency[format || Currency.format][oldCurrency] || '{{amount}}';
+      var newFormat = Currency[format || Currency.format][newCurrency] || '{{amount}}';
+      if (oldFormat.indexOf('amount_no_decimals') !== -1) {
+        cents = Currency.convert(parseInt(jQuery(this).html().replace(/[^0-9]/g, ''), 10)*100, oldCurrency, newCurrency);
+      }
+      else if (oldCurrency === 'JOD' || oldCurrency == 'KWD' || oldCurrency == 'BHD') {
+        cents = Currency.convert(parseInt(jQuery(this).html().replace(/[^0-9]/g, ''), 10)/10, oldCurrency, newCurrency);
+      }
+      else {
+        cents = Currency.convert(parseInt(jQuery(this).html().replace(/[^0-9]/g, ''), 10), oldCurrency, newCurrency);
+      }
+      var newFormattedAmount = Currency.formatMoney(cents, newFormat);
+      jQuery(this).html(newFormattedAmount);
+      jQuery(this).attr('data-currency-'+newCurrency, newFormattedAmount);
+    }
+    // We record the new currency locally.
+    jQuery(this).attr('data-currency', newCurrency);
+  });
+  this.currentCurrency = newCurrency;
+  this.cookie.write(newCurrency);
 };

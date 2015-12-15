@@ -2,7 +2,7 @@
      <div id="singup-popup-scrim"></div>
      <div class="center">
           <div class="popup-header">Sign up for Skylock product updates and exclusive offers.</div>
-          <span class="singup-poup-close">x</span>
+          <span class="singup-poup-close">x</span>	
           <div class="popup-container">
                	{% form 'customer' %}
                   <div class="popup-row">
@@ -11,17 +11,17 @@
                   </div>
                   <div class="popup-row last-row">
                       <button id="singup" type="submit" class="singup-button pull-right">{{ 'general.subscribe' | t }}</button>
-                  </div>
+                  </div> 
             	{% endform %}
           </div>
      </div>
 </div>
 <script type="text/javascript">
-
+  	
   	jQuery("#singup-popup-scrim,.singup-poup-close").on("click", function() {
         jQuery("#singup-popup").fadeOut(400);
     });
-
+  
   	function show_signup(){
     	jQuery("#singup-popup").fadeIn(200);
       	var windowH = jQuery( window ).height();
